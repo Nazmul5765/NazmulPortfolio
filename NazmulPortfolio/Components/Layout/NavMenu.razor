@@ -1,35 +1,31 @@
-﻿<div class="top-row ps-3 navbar navbar-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="">NazmulPortfolio</a>
-    </div>
-</div>
+﻿<nav class="site-nav" aria-label="Primary navigation">
+    <div class="nav-container">
+        <NavLink class="nav-brand" href="/" Match="NavLinkMatch.All">
+            Nazmul Hussain
+        </NavLink>
+        <input type="checkbox"
+               id="nav-toggle"
+               class="nav-toggle"
+               aria-label="Toggle navigation menu" />
 
-<input type="checkbox" title="Navigation menu" class="navbar-toggler"/>
-
-<div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler').click()">
-    <nav class="flex-column">
-        <div class="nav-item px-3">
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <div class="nav-links">
             <NavLink class="nav-link" href="/" Match="NavLinkMatch.All">
-                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home
+                Home
             </NavLink>
-        </div>
-
-        <div class="nav-item px-3">
             <NavLink class="nav-link" href="/about">
-                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> About
+                About
             </NavLink>
-        </div>
-
-        <div class="nav-item px-3">
             <NavLink class="nav-link" href="/projects">
-                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Projects
+                Projects
             </NavLink>
-        </div>
-        
-        <div class="nav-item px-3">
             <NavLink class="nav-link" href="/contact">
-                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Contact
+                Contact
             </NavLink>
         </div>
-    </nav>
-</div>
+    </div>
+</nav>
