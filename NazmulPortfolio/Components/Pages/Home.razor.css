@@ -92,3 +92,61 @@
     outline: 2px solid var(--color-accent);
     outline-offset: 3px;
 }
+
+.about-preview {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: 4rem;
+    padding: 6rem 0;
+    border-top: 1px solid var(--color-border);
+}
+
+.section-label {
+    margin: 0 0 1rem;
+    color: var(--color-accent);
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.section-heading h2 {
+    margin: 0;
+    font-size: clamp(2rem, 4vw, 3.25rem);
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+}
+
+.about-preview-content {
+    align-self: center;
+    max-width: 600px;
+}
+
+.about-preview-content p {
+    margin: 0;
+    color: var(--color-text-secondary);
+    font-size: 1.125rem;
+    line-height: 1.8;
+}
+
+::deep .text-link {
+    display: inline-block;
+    margin-top: 1.5rem;
+    color: var(--color-accent);
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+::deep .text-link:hover {
+    color: var(--color-accent-hover);
+    border-bottom-color: var(--color-accent);
+}
+
+@media (max-width: 750px) {
+    .about-preview {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 4rem 0;
+    }
+}
