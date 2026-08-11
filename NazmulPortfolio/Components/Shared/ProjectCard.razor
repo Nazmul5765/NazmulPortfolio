@@ -1,0 +1,29 @@
+﻿<article class="project-card">
+    <div class="project-card-header">
+        <p class="project-type">@ProjectType</p>
+        <h3 class="project-title">@Title</h3>
+    </div>
+    <p class="project-summary">@Summary</p>
+    <ul class="project-technologies">
+        @foreach (var technology in Technologies)
+        {
+            <li>@technology</li>
+        }
+    </ul>
+    <NavLink class="project-link" href="@DetailUrl">
+        View project
+    </NavLink>
+</article>
+
+@code {
+    [Parameter]
+    public string Title { get; set; } = string.Empty;
+    [Parameter]
+    public string ProjectType { get; set; } = string.Empty;
+    [Parameter]
+    public string Summary { get; set; } = string.Empty;
+    [Parameter]
+    public string DetailUrl { get; set; } = string.Empty;
+    [Parameter]
+    public IReadOnlyList<string> Technologies { get; set; } = Array.Empty<string>();
+}

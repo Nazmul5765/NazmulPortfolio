@@ -50,3 +50,27 @@
         <SkillBadge Name="Git" />
     </ul>
 </section>
+
+<section class="featured-projects" aria-labelledby="featured-projects-title">
+    <div class="section-heading">
+        <p class="section-label">Projects</p>
+        <h2 id="featured-projects-title">Featured work</h2>
+    </div>
+
+    <div class="projects-grid">
+        <ProjectCard
+            Title="RecordShop"
+            ProjectType="Solo project"
+            Summary="A full-stack record catalogue demonstrating layered API design, CRUD operations, search and automated backend testing."
+            DetailUrl="/projects/recordshop"
+            Technologies="@(new[] {"C#", "ASP.NET Core", "Blazor", "Entity Framework Core", "SQL Server", "NUnit"})"
+            />
+        <ProjectCard
+            Title="Calico"
+            ProjectType="Group project"
+            Summary="A LoFi music and productivity platform with authentication, playlists, projects and task timers."
+            DetailUrl="/projects/calico"
+            Technologies="@(new[] {"C#", "ASP.NET Core", "Blazor", "Entity Framework Core", "Supabase", "YouTube API"})"
+            />
+    </div>
+</section>
