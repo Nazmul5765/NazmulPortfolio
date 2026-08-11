@@ -1,0 +1,245 @@
+﻿.about-hero {
+    max-width: 900px;
+    padding: 4rem 0 6rem;
+}
+
+.about-eyebrow {
+    margin: 0 0 1rem;
+    color: var(--color-accent);
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.about-hero h1 {
+    margin: 0;
+    font-size: clamp(2.75rem, 6vw, 4.75rem);
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+}
+
+.about-introduction {
+    max-width: 720px;
+    margin: 2rem 0 0;
+    color: var(--color-text-secondary);
+    font-size: 1.25rem;
+    line-height: 1.75;
+}
+
+.about-journey {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: 4rem;
+    padding: 6rem 0;
+    border-top: 1px solid var(--color-border);
+}
+
+.about-section-label {
+    margin: 0 0 1rem;
+    color: var(--color-accent);
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.about-section-heading h2 {
+    margin: 0;
+    font-size: clamp(2rem, 4vw, 3.25rem);
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+}
+
+.journey-content {
+    align-self: center;
+    max-width: 620px;
+    color: var(--color-text-secondary);
+    font-size: 1.125rem;
+    line-height: 1.8;
+}
+
+.journey-content p {
+    margin: 0;
+}
+
+.journey-content p + p {
+    margin-top: 1.25rem;
+}
+
+.about-learning {
+    padding: 6rem 0;
+    border-top: 1px solid var(--color-border);
+}
+
+.about-learning > .about-section-heading {
+    max-width: 760px;
+}
+
+.learning-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+}
+
+.learning-card {
+    padding: 2rem;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 1rem;
+}
+
+.learning-card h3 {
+    margin: 0;
+    font-size: 1.35rem;
+    line-height: 1.3;
+}
+
+.learning-card p {
+    margin: 1rem 0 0;
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+}
+
+.about-approach {
+    display: grid;
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    gap: 4rem;
+    padding: 6rem 0;
+    border-top: 1px solid var(--color-border);
+}
+
+.approach-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.approach-list li {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1.5rem;
+    padding: 1.75rem 0;
+    border-top: 1px solid var(--color-border);
+}
+
+.approach-list li:last-child {
+    border-bottom: 1px solid var(--color-border);
+}
+
+.approach-number {
+    color: var(--color-accent);
+    font-weight: 600;
+}
+
+.approach-list h3 {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.approach-list p {
+    margin: 0.75rem 0 0;
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+}
+
+.about-cta {
+    padding: 6rem 0;
+    border-top: 1px solid var(--color-border);
+    text-align: center;
+}
+
+.about-cta h2 {
+    margin: 0;
+    font-size: clamp(2rem, 4vw, 3.25rem);
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+}
+
+.about-cta-summary {
+    max-width: 680px;
+    margin: 1.5rem auto 2rem;
+    color: var(--color-text-secondary);
+    font-size: 1.125rem;
+    line-height: 1.75;
+}
+
+.about-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+::deep .about-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 3rem;
+    padding: 0.75rem 1.25rem;
+    border: 1px solid transparent;
+    border-radius: 0.6rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition:
+            background-color 0.2s ease,
+            border-color 0.2s ease,
+            color 0.2s ease,
+            transform 0.2s ease;
+}
+
+::deep .about-link-primary {
+    background-color: var(--color-accent);
+    color: var(--color-background);
+}
+
+::deep .about-link-secondary {
+    background-color: var(--color-surface);
+    border-color: var(--color-border);
+    color: var(--color-text-primary);
+}
+
+::deep .about-link:hover {
+    transform: translateY(-2px);
+}
+
+::deep .about-link-primary:hover {
+    background-color: var(--color-accent-hover);
+    color: var(--color-background);
+}
+
+::deep .about-link-secondary:hover {
+    background-color: var(--color-surface-elevated);
+    border-color: var(--color-accent);
+    color: var(--color-text-primary);
+}
+
+::deep .about-link:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+}
+
+@media (max-width: 750px) {
+    .about-hero {
+        padding: 3rem 0 4rem;
+    }
+
+    .about-journey {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 4rem 0;
+    }
+
+    .about-learning {
+        padding: 4rem 0;
+    }
+
+    .about-approach {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 4rem 0;
+    }
+
+    .about-cta {
+        padding: 4rem 0;
+    }
+}
