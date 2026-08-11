@@ -2,5 +2,83 @@
 
 <PageTitle>Projects</PageTitle>
 
-<h1>Projects</h1>
+<header class="projects-hero">
+    <p class="projects-eyebrow">Projects</p>
+    <h1>Work that demonstrates how I turn ideas into software</h1>
 
+    @* TODO: Review and personalise this sample Projects-page introduction. *@
+    <p class="projects-introduction">
+        These projects demonstrate my experience building full-stack
+        applications independently and as part of a development team.
+    </p>
+</header>
+
+<section class="projects-list" aria-labelledby="selected-projects-title">
+    <div class="projects-section-heading">
+        <p class="projects-section-label">Selected work</p>
+        <h2 id="selected-projects-title">
+            Projects built independently and collaboratively
+        </h2>
+    </div>
+
+    @* TODO: Review project summaries and technology lists during the content phase. *@
+    <div class="projects-grid">
+        <ProjectCard
+            Title="RecordShop"
+            ProjectType="Solo project"
+            Summary="A full-stack record catalogue demonstrating layered API design, CRUD operations, search and automated backend testing."
+            DetailUrl="/projects/recordshop"
+            Technologies="@(new[] { "C#", "ASP.NET Core", "Blazor", "Entity Framework Core", "SQL Server", "NUnit" })"
+        />
+
+        <ProjectCard
+            Title="Calico"
+            ProjectType="Group project"
+            Summary="A LoFi music and productivity platform with authentication, playlists, projects and task timers."
+            DetailUrl="/projects/calico"
+            Technologies="@(new[] { "C#", "ASP.NET Core", "Blazor", "Entity Framework Core", "Supabase", "YouTube API" })"
+        />
+    </div>
+</section>
+
+<section class="project-capabilities" aria-labelledby="capabilities-title">
+    <div class="projects-section-heading">
+        <p class="projects-section-label">Across my work</p>
+        <h2 id="capabilities-title">What these projects demonstrate</h2>
+    </div>
+
+    @* TODO: Review and personalise these sample project capabilities. *@
+    <ul class="capabilities-list">
+        <li>
+            <h3>Full-stack development</h3>
+            <p>Connecting user interfaces, application logic and data storage.</p>
+        </li>
+        <li>
+            <h3>API design</h3>
+            <p>Building structured endpoints around clear application requirements.</p>
+        </li>
+        <li>
+            <h3>Data management</h3>
+            <p>Working with relational data through Entity Framework Core.</p>
+        </li>
+        <li>
+            <h3>Testing and collaboration</h3>
+            <p>Improving software through automated tests, Git and team feedback.</p>
+        </li>
+    </ul>
+</section>
+
+<section class="projects-cta" aria-labelledby="projects-cta-title">
+    <p class="projects-section-label">Get in touch</p>
+    <h2 id="projects-cta-title">Interested in how I could contribute?</h2>
+
+    @* TODO: Review this sample Projects-page call-to-action text. *@
+    <p class="projects-cta-summary">
+        I’m looking for a junior software development opportunity where I can
+        apply these skills, learn from an experienced team and keep improving.
+    </p>
+
+    <NavLink class="projects-contact-link" href="/contact">
+        Contact me
+    </NavLink>
+</section>
