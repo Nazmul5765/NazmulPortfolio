@@ -177,6 +177,31 @@
     margin-top: 2.5rem;
 }
 
+.contact-cta {
+    padding: 6rem 0;
+    border-top: 1px solid var(--color-border);
+    text-align: center;
+}
+
+.contact-cta-content {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.contact-cta-content h2 {
+    margin: 0;
+    font-size: clamp(2rem, 4vw, 3.25rem);
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+}
+
+.contact-cta-summary {
+    margin: 1.5rem auto 2rem;
+    color: var(--color-text-secondary);
+    font-size: 1.125rem;
+    line-height: 1.75;
+}
+
 @media (max-width: 750px) {
     .about-preview {
         grid-template-columns: 1fr;
@@ -191,5 +216,9 @@
     }
     .projects-grid {
         grid-template-columns: 1fr;
+    }
+
+    .contact-cta {
+        padding: 4rem 0;
     }
 }
