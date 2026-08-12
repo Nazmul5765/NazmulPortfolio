@@ -1,0 +1,21 @@
+﻿@page "/{*PageRoute:nonfile}"
+<PageTitle>Page not found | Nazmul Hussain</PageTitle>
+
+<section class="not-found" aria-labelledby="not-found-title">
+    <p class="section-label">404 ERROR</p>
+
+    <h1 id="not-found-title">Page not found</h1>
+
+    <p class="not-found__message">
+        The page you are looking for does not exist or may have been moved.
+    </p>
+
+    <a class="button button--primary" href="/">
+        Return home
+    </a>
+</section>
+
+@code {
+    [Parameter]
+    public string? PageRoute { get; set; }
+}
