@@ -1,0 +1,168 @@
+﻿.contact-section-label {
+    margin: 0 0 1.5rem;
+    color: var(--color-accent);
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.contact-hero {
+    padding: 6rem 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.contact-hero h1 {
+    max-width: 950px;
+    margin: 0;
+    font-size: clamp(3rem, 7vw, 6rem);
+    font-weight: 400;
+    line-height: 1.08;
+}
+
+.contact-introduction {
+    max-width: 760px;
+    margin: 2.5rem 0 0;
+    color: var(--color-text-secondary);
+    font-size: 1.25rem;
+    line-height: 1.8;
+}
+
+.contact-methods {
+    padding: 6rem 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.contact-methods-heading {
+    margin-bottom: 3rem;
+}
+
+.contact-methods-heading h2 {
+    max-width: 700px;
+    margin: 0;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 400;
+    line-height: 1.15;
+}
+
+.contact-methods-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.contact-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 320px;
+    padding: 2.5rem;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 1rem;
+}
+
+.contact-card-label {
+    margin: 0 0 1.5rem;
+    color: var(--color-accent);
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.contact-card h3 {
+    margin: 0 0 1.25rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.contact-card > p:not(.contact-card-label) {
+    margin: 0;
+    color: var(--color-text-secondary);
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.contact-card-link {
+    align-self: flex-start;
+    margin-top: auto;
+    padding-top: 2rem;
+    color: var(--color-accent);
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.contact-card-link:hover {
+    text-decoration: underline;
+}
+
+.contact-availability {
+    max-width: 900px;
+    padding: 6rem 0;
+}
+
+.contact-availability h2 {
+    margin: 0;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 400;
+    line-height: 1.15;
+}
+
+.contact-availability > p:last-child {
+    max-width: 760px;
+    margin: 2rem 0 0;
+    color: var(--color-text-secondary);
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+@media (max-width: 750px) {
+    .contact-hero,
+    .contact-methods,
+    .contact-availability {
+        padding: 4rem 0;
+    }
+
+    .contact-hero h1 {
+        font-size: clamp(2.75rem, 13vw, 4rem);
+    }
+
+    .contact-introduction {
+        margin-top: 2rem;
+        font-size: 1.1rem;
+    }
+
+    .contact-methods-heading {
+        margin-bottom: 2rem;
+    }
+
+    .contact-methods-heading h2,
+    .contact-availability h2 {
+        font-size: 2.25rem;
+    }
+
+    .contact-methods-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-card {
+        min-height: 280px;
+        padding: 2rem;
+    }
+
+    .contact-availability > p:last-child {
+        font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 751px) and (max-width: 1100px) {
+    .contact-methods-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-card:last-child {
+        grid-column: 1 / -1;
+    }
+}
