@@ -1,5 +1,173 @@
 ﻿@page "/projects/recordshop"
 
 <PageTitle>RecordShop</PageTitle>
+<div class="project-back">
+    <NavLink class="project-back-link" href="/projects">
+        &larr; Back to projects
+    </NavLink>
+</div>
 
-<h1>RecordShop</h1>
+<header class="project-detail-hero">
+    <p class="project-type">Solo project</p>
+    <h1>RecordShop</h1>
+
+    @* TODO: Review and personalise this sample RecordShop introduction. *@
+    <p class="project-introduction">
+        A full-stack record catalogue built to demonstrate API design,
+        database integration, a Blazor user interface and automated testing.
+    </p>
+
+    <ul class="project-technologies" aria-label="Technologies used">
+        <li>C#</li>
+        <li>ASP.NET Core</li>
+        <li>Blazor</li>
+        <li>Entity Framework Core</li>
+        <li>SQL Server</li>
+        <li>NUnit</li>
+    </ul>
+
+    <div class="project-actions">
+        <a href="https://github.com/Nazmul5765/Record-Shop"
+           target="_blank"
+           rel="noopener noreferrer">
+            Backend repository
+        </a>
+
+        <a href="https://github.com/Nazmul5765/record-shop-frontend"
+           target="_blank"
+           rel="noopener noreferrer">
+            Frontend repository
+        </a>
+    </div>
+</header>
+
+<section class="project-overview" aria-labelledby="overview-title">
+    <div class="project-section-heading">
+        <p class="project-section-label">Overview</p>
+        <h2 id="overview-title">A full-stack catalogue for managing records</h2>
+    </div>
+
+    @* TODO: Replace this sample overview with accurate RecordShop goals and context. *@
+    <div class="project-section-content">
+        <p>
+            RecordShop was developed as a solo project to bring together the
+            backend, database, frontend and testing skills I developed during
+            the Northcoders bootcamp.
+        </p>
+        <p>
+            The application allows record information to be stored, retrieved
+            and managed through an ASP.NET Core API and a Blazor interface.
+        </p>
+    </div>
+</section>
+
+<section class="project-decisions" aria-labelledby="decisions-title">
+    <div class="project-section-heading">
+        <p class="project-section-label">Engineering</p>
+        <h2 id="decisions-title">From requirements to implementation</h2>
+    </div>
+
+    @* TODO: Replace these sample cards with accurate RecordShop challenges and decisions. *@
+    <div class="decisions-grid">
+        <article class="decision-card">
+            <p class="decision-label">Challenge</p>
+            <h3>Organising a full-stack application</h3>
+            <p>
+                The project needed a clear separation between data access,
+                application behaviour, API endpoints and the user interface.
+            </p>
+        </article>
+
+        <article class="decision-card">
+            <p class="decision-label">Approach</p>
+            <h3>Separating responsibilities</h3>
+            <p>
+                The backend was structured into distinct layers, while the
+                Blazor frontend communicated with it through HTTP requests.
+            </p>
+        </article>
+    </div>
+</section>
+
+<section class="project-features" aria-labelledby="features-title">
+    <div class="project-section-heading">
+        <p class="project-section-label">Features</p>
+        <h2 id="features-title">Core application capabilities</h2>
+    </div>
+
+    @* TODO: Verify and refine these features against the RecordShop codebase. *@
+    <ul class="features-list">
+        <li>
+            <span class="feature-number">01</span>
+            <div>
+                <h3>Record catalogue</h3>
+                <p>Browse stored records and view their key information.</p>
+            </div>
+        </li>
+
+        <li>
+            <span class="feature-number">02</span>
+            <div>
+                <h3>Search and filtering</h3>
+                <p>Find records using information exposed by the API.</p>
+            </div>
+        </li>
+
+        <li>
+            <span class="feature-number">03</span>
+            <div>
+                <h3>Catalogue management</h3>
+                <p>Create, update and remove record information.</p>
+            </div>
+        </li>
+
+        <li>
+            <span class="feature-number">04</span>
+            <div>
+                <h3>Persistent data</h3>
+                <p>Store application data through Entity Framework Core and SQL Server.</p>
+            </div>
+        </li>
+    </ul>
+</section>
+
+<section class="project-testing" aria-labelledby="testing-title">
+    <div class="project-section-heading">
+        <p class="project-section-label">Quality</p>
+        <h2 id="testing-title">Testing important backend behaviour</h2>
+    </div>
+
+    @* TODO: Verify and expand this testing summary against RecordShop.Test. *@
+    <div class="testing-content">
+        <p>
+            The backend includes automated tests written with NUnit to check
+            important application behaviour and reduce the risk of regressions.
+        </p>
+
+        <ul class="testing-tools" aria-label="Testing tools used">
+            <li>NUnit</li>
+            <li>Moq</li>
+            <li>Shouldly</li>
+        </ul>
+    </div>
+</section>
+
+<section class="project-reflection" aria-labelledby="reflection-title">
+    <div class="reflection-content">
+        <p class="project-section-label">Reflection</p>
+        <h2 id="reflection-title">What I developed through this project</h2>
+
+        @* TODO: Replace this sample reflection with Nazmul's actual learning. *@
+        <p>
+            Building RecordShop strengthened my understanding of how a frontend,
+            API and relational database work together. It also gave me practical
+            experience structuring a larger application and testing its behaviour.
+        </p>
+    </div>
+
+    <div class="project-navigation">
+        <NavLink class="project-navigation-link" href="/projects/calico">
+            Next project: Calico &rarr;
+        </NavLink>
+    </div>
+</section>

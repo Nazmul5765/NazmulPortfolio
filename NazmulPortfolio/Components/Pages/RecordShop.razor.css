@@ -1,0 +1,351 @@
+﻿.project-back ::deep .project-back-link {
+    display: inline-block;
+    margin-top: 2rem;
+    color: var(--color-text-secondary);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.project-back ::deep .project-back-link:hover {
+    color: var(--color-accent);
+}
+
+.project-back ::deep .project-back-link:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+}
+
+.project-detail-hero {
+    max-width: 920px;
+    padding: 4rem 0 6rem;
+}
+
+.project-type {
+    margin: 0 0 1rem;
+    color: var(--color-accent);
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.project-detail-hero h1 {
+    margin: 0;
+    font-size: clamp(3rem, 8vw, 5.5rem);
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+}
+
+.project-introduction {
+    max-width: 760px;
+    margin: 2rem 0 0;
+    color: var(--color-text-secondary);
+    font-size: 1.25rem;
+    line-height: 1.75;
+}
+
+.project-technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin: 2rem 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.project-technologies li {
+    padding: 0.5rem 0.85rem;
+    background-color: var(--color-surface-elevated);
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    color: var(--color-text-secondary);
+}
+
+.project-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.project-actions a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 3rem;
+    padding: 0.75rem 1.25rem;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 0.6rem;
+    color: var(--color-text-primary);
+    font-weight: 600;
+    text-decoration: none;
+    transition:
+            background-color 0.2s ease,
+            border-color 0.2s ease,
+            color 0.2s ease,
+            transform 0.2s ease;
+}
+
+.project-actions a:hover {
+    background-color: var(--color-surface-elevated);
+    border-color: var(--color-accent);
+    color: var(--color-text-primary);
+    transform: translateY(-2px);
+}
+
+.project-actions a:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+}
+
+.project-overview {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: 4rem;
+    padding: 6rem 0;
+    border-top: 1px solid var(--color-border);
+}
+
+.project-section-label {
+    margin: 0 0 1rem;
+    color: var(--color-accent);
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.project-section-heading h2 {
+    margin: 0;
+    font-size: clamp(2rem, 4vw, 3.25rem);
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+}
+
+.project-section-content {
+    align-self: center;
+    max-width: 620px;
+    color: var(--color-text-secondary);
+    font-size: 1.125rem;
+    line-height: 1.8;
+}
+
+.project-section-content p {
+    margin: 0;
+}
+
+.project-section-content p + p {
+    margin-top: 1.25rem;
+}
+
+.project-decisions {
+    padding: 6rem 0;
+    border-top: 1px solid var(--color-border);
+}
+
+.project-decisions > .project-section-heading {
+    max-width: 760px;
+}
+
+.decisions-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+}
+
+.decision-card {
+    padding: 2rem;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 1rem;
+}
+
+.decision-label {
+    margin: 0 0 1rem;
+    color: var(--color-accent);
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.decision-card h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    line-height: 1.3;
+}
+
+.decision-card > p:last-child {
+    margin: 1rem 0 0;
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+}
+
+.project-features {
+    display: grid;
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    gap: 4rem;
+    padding: 6rem 0;
+    border-top: 1px solid var(--color-border);
+}
+
+.features-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.features-list li {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1.5rem;
+    padding: 1.75rem 0;
+    border-top: 1px solid var(--color-border);
+}
+
+.features-list li:last-child {
+    border-bottom: 1px solid var(--color-border);
+}
+
+.feature-number {
+    color: var(--color-accent);
+    font-weight: 600;
+}
+
+.features-list h3 {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.features-list p {
+    margin: 0.75rem 0 0;
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+}
+
+.project-testing {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: 4rem;
+    padding: 6rem 0;
+    border-top: 1px solid var(--color-border);
+}
+
+.testing-content {
+    align-self: center;
+    max-width: 620px;
+}
+
+.testing-content > p {
+    margin: 0;
+    color: var(--color-text-secondary);
+    font-size: 1.125rem;
+    line-height: 1.8;
+}
+
+.testing-tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin: 2rem 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.testing-tools li {
+    padding: 0.5rem 0.85rem;
+    background-color: var(--color-surface-elevated);
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    color: var(--color-text-secondary);
+}
+
+.project-reflection {
+    padding: 6rem 0;
+    border-top: 1px solid var(--color-border);
+}
+
+.reflection-content {
+    max-width: 760px;
+}
+
+.reflection-content h2 {
+    margin: 0;
+    font-size: clamp(2rem, 4vw, 3.25rem);
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+}
+
+.reflection-content > p:last-child {
+    margin: 1.5rem 0 0;
+    color: var(--color-text-secondary);
+    font-size: 1.125rem;
+    line-height: 1.8;
+}
+
+.project-navigation {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--color-border);
+}
+
+::deep .project-navigation-link {
+    color: var(--color-accent);
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+::deep .project-navigation-link:hover {
+    color: var(--color-accent-hover);
+    border-bottom-color: var(--color-accent);
+}
+
+::deep .project-navigation-link:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+}
+
+@media (max-width: 750px) {
+    .project-detail-hero {
+        padding: 3rem 0 4rem;
+    }
+
+    .project-overview {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 4rem 0;
+    }
+
+    .project-decisions {
+        padding: 4rem 0;
+    }
+
+    .decisions-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-features {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 4rem 0;
+    }
+
+    .project-testing {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 4rem 0;
+    }
+
+    .project-reflection {
+        padding: 4rem 0;
+    }
+
+    .project-navigation {
+        justify-content: flex-start;
+    }
+}
