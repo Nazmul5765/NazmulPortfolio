@@ -11,15 +11,15 @@
     <p class="project-type">Solo project</p>
     <h1>RecordShop</h1>
 
-    @* TODO: Review and personalise this sample RecordShop introduction. *@
     <p class="project-introduction">
-        A full-stack record catalogue built to demonstrate API design,
-        database integration, a Blazor user interface and automated testing.
+        A full-stack record catalogue for browsing, searching and managing albums,
+        built with a layered ASP.NET Core Web API, SQL Server and a Blazor frontend.
     </p>
 
     <ul class="project-technologies" aria-label="Technologies used">
         <li>C#</li>
-        <li>ASP.NET Core</li>
+        <li>.NET 8</li>
+        <li>ASP.NET Core Web API</li>
         <li>Blazor</li>
         <li>Entity Framework Core</li>
         <li>SQL Server</li>
@@ -47,16 +47,19 @@
         <h2 id="overview-title">A full-stack catalogue for managing records</h2>
     </div>
 
-    @* TODO: Replace this sample overview with accurate RecordShop goals and context. *@
     <div class="project-section-content">
         <p>
-            RecordShop was developed as a solo project to bring together the
-            backend, database, frontend and testing skills I developed during
-            the Northcoders bootcamp.
+            I developed RecordShop as my solo project during the Northcoders
+            Enterprise Engineering Bootcamp. My goal was to apply the backend,
+            database, testing and frontend skills I had learned by building a
+            complete full-stack application.
         </p>
+
         <p>
-            The application allows record information to be stored, retrieved
-            and managed through an ASP.NET Core API and a Blazor interface.
+            Users can browse, search, add, update and delete albums through the
+            Blazor frontend. The frontend sends HTTP requests to an ASP.NET Core
+            Web API, which uses Entity Framework Core to manage data stored in
+            SQL Server.
         </p>
     </div>
 </section>
@@ -67,23 +70,24 @@
         <h2 id="decisions-title">From requirements to implementation</h2>
     </div>
 
-    @* TODO: Replace these sample cards with accurate RecordShop challenges and decisions. *@
     <div class="decisions-grid">
         <article class="decision-card">
             <p class="decision-label">Challenge</p>
-            <h3>Organising a full-stack application</h3>
+            <h3>Managing responsibilities across the application</h3>
             <p>
-                The project needed a clear separation between data access,
-                application behaviour, API endpoints and the user interface.
+                The application needed to handle HTTP requests, business logic and
+                database access without placing all of these responsibilities in
+                one class.
             </p>
         </article>
 
         <article class="decision-card">
             <p class="decision-label">Approach</p>
-            <h3>Separating responsibilities</h3>
+            <h3>Using a layered backend architecture</h3>
             <p>
-                The backend was structured into distinct layers, while the
-                Blazor frontend communicated with it through HTTP requests.
+                I separated the backend into controller, service and repository
+                layers, using dependency injection to connect them. The Blazor
+                frontend communicates with the API through HTTP requests.
             </p>
         </article>
     </div>
@@ -95,37 +99,48 @@
         <h2 id="features-title">Core application capabilities</h2>
     </div>
 
-    @* TODO: Verify and refine these features against the RecordShop codebase. *@
     <ul class="features-list">
         <li>
             <span class="feature-number">01</span>
             <div>
-                <h3>Record catalogue</h3>
-                <p>Browse stored records and view their key information.</p>
+                <h3>Browse and view albums</h3>
+                <p>
+                    Browse the complete album catalogue and open an individual album
+                    to view its details.
+                </p>
             </div>
         </li>
 
         <li>
             <span class="feature-number">02</span>
             <div>
-                <h3>Search and filtering</h3>
-                <p>Find records using information exposed by the API.</p>
+                <h3>Search for albums</h3>
+                <p>
+                    Find albums by their ID, title or artist using search options
+                    provided through the frontend.
+                </p>
             </div>
         </li>
 
         <li>
             <span class="feature-number">03</span>
             <div>
-                <h3>Catalogue management</h3>
-                <p>Create, update and remove record information.</p>
+                <h3>Manage the album catalogue</h3>
+                <p>
+                    Add new albums, edit existing album details and remove albums
+                    that are no longer required.
+                </p>
             </div>
         </li>
 
         <li>
             <span class="feature-number">04</span>
             <div>
-                <h3>Persistent data</h3>
-                <p>Store application data through Entity Framework Core and SQL Server.</p>
+                <h3>Database persistence</h3>
+                <p>
+                    Store and retrieve album data using Entity Framework Core
+                    with a SQL Server database.
+                </p>
             </div>
         </li>
     </ul>
@@ -137,11 +152,13 @@
         <h2 id="testing-title">Testing important backend behaviour</h2>
     </div>
 
-    @* TODO: Verify and expand this testing summary against RecordShop.Test. *@
     <div class="testing-content">
         <p>
-            The backend includes automated tests written with NUnit to check
-            important application behaviour and reduce the risk of regressions.
+            I used NUnit to test the controller, service and repository layers,
+            covering CRUD operations, search behaviour and HTTP responses. Moq
+            isolates dependencies in the controller and service tests, while the
+            repository tests use an in-memory database and Shouldly keeps the
+            assertions readable.
         </p>
 
         <ul class="testing-tools" aria-label="Testing tools used">
@@ -157,11 +174,11 @@
         <p class="project-section-label">Reflection</p>
         <h2 id="reflection-title">What I developed through this project</h2>
 
-        @* TODO: Replace this sample reflection with Nazmul's actual learning. *@
         <p>
-            Building RecordShop strengthened my understanding of how a frontend,
-            API and relational database work together. It also gave me practical
-            experience structuring a larger application and testing its behaviour.
+            I better understood how a request moves from the Blazor frontend through
+            the controller, service and repository layers to the database. Testing
+            each backend layer also helped me learn how to isolate dependencies and
+            verify application behaviour.
         </p>
     </div>
 
