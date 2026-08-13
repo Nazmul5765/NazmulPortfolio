@@ -14,7 +14,7 @@
 
     <p class="project-introduction">
         A full-stack record catalogue for browsing, searching and managing albums,
-        built with a layered ASP.NET Core Web API, SQL Server and a Blazor frontend.
+        built with a layered ASP.NET Core Web API, TDD, SQL Server and a Blazor frontend.
     </p>
 
     <ul class="project-technologies" aria-label="Technologies used">
@@ -53,7 +53,7 @@
             I developed RecordShop as my solo project during the Northcoders
             Enterprise Engineering Bootcamp. My goal was to apply the backend,
             database, testing and frontend skills I had learned by building a
-            complete full-stack application.
+            complete full-stack application with a strong focus on backend development.
         </p>
 
         <p>
@@ -137,10 +137,10 @@
         <li>
             <span class="feature-number">04</span>
             <div>
-                <h3>Database persistence</h3>
-                <p>
-                    Store and retrieve album data using Entity Framework Core
-                    with a SQL Server database.
+            <h3>Persistence and health monitoring</h3>
+            <p>
+                    Store album data with Entity Framework Core and SQL Server, with
+                    health checks for both the API and its database connection.
                 </p>
             </div>
         </li>
@@ -150,16 +150,16 @@
 <section class="project-testing" aria-labelledby="testing-title">
     <div class="project-section-heading">
         <p class="project-section-label">Quality</p>
-        <h2 id="testing-title">Testing important backend behaviour</h2>
+        <h2 id="testing-title">Developing backend behaviour with TDD</h2>
     </div>
 
     <div class="testing-content">
         <p>
-            I used NUnit to test the controller, service and repository layers,
-            covering CRUD operations, search behaviour and HTTP responses. Moq
-            isolates dependencies in the controller and service tests, while the
-            repository tests use an in-memory database and Shouldly keeps the
-            assertions readable.
+            I used test-driven development for much of the backend, writing tests
+            before implementing the related functionality. NUnit tests cover the
+            controller, service and repository layers, including CRUD operations,
+            search behaviour and HTTP responses. Moq isolates dependencies, while
+            repository tests use an in-memory database and Shouldly keeps assertions readable.
         </p>
 
         <ul class="testing-tools" aria-label="Testing tools used">
@@ -178,8 +178,8 @@
         <p>
             I better understood how a request moves from the Blazor frontend through
             the controller, service and repository layers to the database. Testing
-            each backend layer also helped me learn how to isolate dependencies and
-            verify application behaviour.
+            each backend layer also helped me learn how to isolate dependencies,
+            verify behaviour and monitor whether the API and database are healthy.
         </p>
     </div>
 
