@@ -261,6 +261,47 @@
     color: var(--color-text-secondary);
 }
 
+.project-deployment {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: 4rem;
+    padding: 6rem 0;
+    border-top: 1px solid var(--color-border);
+}
+
+.deployment-content {
+    align-self: center;
+    max-width: 620px;
+}
+
+.deployment-content > p {
+    margin: 0;
+    color: var(--color-text-secondary);
+    font-size: 1.125rem;
+    line-height: 1.8;
+}
+
+.deployment-content p + p {
+    margin-top: 1.25rem;
+}
+
+.deployment-tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin: 2rem 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.deployment-tools li {
+    padding: 0.5rem 0.85rem;
+    background-color: var(--color-surface-elevated);
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    color: var(--color-text-secondary);
+}
+
 .project-reflection {
     padding: 6rem 0;
     border-top: 1px solid var(--color-border);

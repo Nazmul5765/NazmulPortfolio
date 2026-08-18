@@ -14,7 +14,7 @@
 
     <p class="project-introduction">
         A full-stack record catalogue for browsing, searching and managing albums,
-        built with a layered ASP.NET Core Web API, TDD, SQL Server and a Blazor frontend.
+        built with a layered ASP.NET Core Web API, TDD, Entity Framework Core and a Blazor frontend.
     </p>
 
     <ul class="project-technologies" aria-label="Technologies used">
@@ -24,6 +24,7 @@
         <li>Blazor</li>
         <li>Entity Framework Core</li>
         <li>SQL Server</li>
+        <li>PostgreSQL</li>
         <li>NUnit</li>
     </ul>
 
@@ -38,6 +39,12 @@
            target="_blank"
            rel="noopener noreferrer">
             Frontend repository
+        </a>
+
+        <a href="https://recordshop.nazmulhussain.co.uk"
+           target="_blank"
+           rel="noopener noreferrer">
+            Live demo
         </a>
     </div>
 </header>
@@ -57,10 +64,10 @@
         </p>
 
         <p>
-            Users can browse, search, add, update and delete albums through the
-            Blazor frontend. The frontend sends HTTP requests to an ASP.NET Core
-            Web API, which uses Entity Framework Core to manage data stored in
-            SQL Server.
+            Users can browse, search, add, update and delete albums through the Blazor frontend.
+            The frontend sends HTTP requests to an ASP.NET Core Web API, which uses
+            Entity Framework Core for data access. I originally developed the application with
+            SQL Server and later migrated the deployed version to PostgreSQL hosted on Neon.
         </p>
     </div>
 </section>
@@ -137,10 +144,12 @@
         <li>
             <span class="feature-number">04</span>
             <div>
-            <h3>Persistence and health monitoring</h3>
-            <p>
-                    Store album data with Entity Framework Core and SQL Server, with
-                    health checks for both the API and its database connection.
+                <h3>Persistence and health monitoring</h3>
+                <p>
+                    Store album data using Entity Framework Core, with SQL Server
+                    used during development and PostgreSQL for the deployed application.
+                    Health checks monitor both the API and its database connection.
+
                 </p>
             </div>
         </li>
@@ -150,7 +159,7 @@
 <section class="project-testing" aria-labelledby="testing-title">
     <div class="project-section-heading">
         <p class="project-section-label">Quality</p>
-        <h2 id="testing-title">Developing backend behaviour with TDD</h2>
+        <h2 id="testing-title">Testing backend behaviour with TDD</h2>
     </div>
 
     <div class="testing-content">
@@ -170,16 +179,48 @@
     </div>
 </section>
 
+<section class="project-deployment" aria-labelledby="deployment-title">
+    <div class="project-section-heading">
+        <p class="project-section-label">Deployment</p>
+        <h2 id="deployment-title">Taking the application from local development to production</h2>
+    </div>
+
+    <div class="deployment-content">
+        <p>
+            I deployed the RecordShop frontend and API to Render using Docker.
+            To support the live application, I switched the production database
+            provider from SQL Server to PostgreSQL and configured the application
+            to connect to a Neon-hosted database.
+        </p>
+        <p>
+            I also separated development and production configuration so the
+            application can use the appropriate API and database settings for each
+            environment. The live frontend is available through a custom subdomain
+            of my portfolio domain.
+        </p>
+
+        <ul class="deployment-tools" aria-label="Deployment tools used">
+            <li>Docker</li>
+            <li>Render</li>
+            <li>PostgreSQL</li>
+            <li>Neon</li>
+        </ul>
+    </div>
+</section>
+
 <section class="project-reflection" aria-labelledby="reflection-title">
     <div class="reflection-content">
         <p class="project-section-label">Reflection</p>
         <h2 id="reflection-title">What I developed through this project</h2>
 
         <p>
-            I better understood how a request moves from the Blazor frontend through
+            I better understand how a request moves from the Blazor frontend through
             the controller, service and repository layers to the database. Testing
-            each backend layer also helped me learn how to isolate dependencies,
-            verify behaviour and monitor whether the API and database are healthy.
+            each backend layer helped me learn how to isolate dependencies and verify
+            behaviour, while deploying the application gave me practical experience
+            of configuring an application for a production environment, migrating between
+            database providers and troubleshooting issues that only became apparent
+            outside local development.
         </p>
     </div>
 
