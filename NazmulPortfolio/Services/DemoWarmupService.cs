@@ -23,24 +23,55 @@ public class DemoWarmupService : BackgroundService
             "https://record-shop-frontend-q9m3.onrender.com/"
         };
 
-        foreach (var url in warmupUrls)
+        var warmupTasks = warmupUrls.Select(url =>
+            WarmServiceAsync(httpClient, url, stoppingToken));
+
+        await Task.WhenAll(warmupTasks);
+    }
+
+    private async Task WarmServiceAsync(
+        HttpClient httpClient,
+        string url,
+        CancellationToken stoppingToken)
+    {
+        const int maxAttempts = 12;
+        var delay = TimeSpan.FromSeconds(8);
+
+        for (var attempt = 1; attempt <= maxAttempts; attempt++)
         {
             try
             {
-                var response = await httpClient.GetAsync(url, stoppingToken);
+                using var response = await httpClient.GetAsync(url, stoppingToken);
 
                 _logger.LogInformation(
-                    "Warm-up request to {Url} returned {StatusCode}",
+                    "Warm-up attempt {Attempt} for {Url} returned {StatusCode}",
+                    attempt,
                     url,
                     response.StatusCode);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    return;
+                }
             }
-            catch (Exception ex)
+            catch (Exception ex) when (!stoppingToken.IsCancellationRequested)
             {
                 _logger.LogWarning(
                     ex,
-                    "Warm-up request to {Url} failed",
+                    "Warm-up attempt {Attempt} for {Url} failed",
+                    attempt,
                     url);
             }
+
+            if (attempt < maxAttempts)
+            {
+                await Task.Delay(delay, stoppingToken);
+            }
         }
+
+        _logger.LogWarning(
+            "Warm-up for {Url} did not succeed after {Attempts} attempts",
+            url,
+            maxAttempts);
     }
 }
