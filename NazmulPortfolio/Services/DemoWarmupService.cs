@@ -3,10 +3,14 @@ namespace NazmulPortfolio.Services;
 public class DemoWarmupService : BackgroundService
 {
     private readonly IHttpClientFactory _httpClientFactory;
+    private readonly ILogger<DemoWarmupService> _logger;
 
-    public DemoWarmupService(IHttpClientFactory httpClientFactory)
+    public DemoWarmupService(
+        IHttpClientFactory httpClientFactory,
+        ILogger<DemoWarmupService> logger)
     {
         _httpClientFactory = httpClientFactory;
+        _logger = logger;
     }
 
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
@@ -19,18 +23,24 @@ public class DemoWarmupService : BackgroundService
             "https://record-shop-frontend-q9m3.onrender.com/"
         };
 
-        var warmupTasks = warmupUrls.Select(async url =>
+        foreach (var url in warmupUrls)
         {
             try
             {
-                await httpClient.GetAsync(url, stoppingToken);
-            }
-            catch
-            {
-                // Warming a demo should never stop the portfolio from running.
-            }
-        });
+                var response = await httpClient.GetAsync(url, stoppingToken);
 
-        await Task.WhenAll(warmupTasks);
+                _logger.LogInformation(
+                    "Warm-up request to {Url} returned {StatusCode}",
+                    url,
+                    response.StatusCode);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogWarning(
+                    ex,
+                    "Warm-up request to {Url} failed",
+                    url);
+            }
+        }
     }
 }
