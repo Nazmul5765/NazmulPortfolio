@@ -1,10 +1,14 @@
 using NazmulPortfolio.Components;
+using NazmulPortfolio.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+
+builder.Services.AddHttpClient();
+builder.Services.AddHostedService<DemoWarmupService>();
 
 var app = builder.Build();
 
