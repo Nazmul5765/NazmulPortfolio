@@ -15,10 +15,11 @@ public class DemoWarmupService : BackgroundService
 
         var warmupUrls = new[]
         {
-            "https://record-shop-api.onrender.com/health"
+            "https://record-shop-api.onrender.com/health",
+            "https://record-shop-frontend-q9m3.onrender.com/"
         };
 
-        foreach (var url in warmupUrls)
+        var warmupTasks = warmupUrls.Select(async url =>
         {
             try
             {
@@ -28,6 +29,8 @@ public class DemoWarmupService : BackgroundService
             {
                 // Warming a demo should never stop the portfolio from running.
             }
-        }
+        });
+
+        await Task.WhenAll(warmupTasks);
     }
 }
