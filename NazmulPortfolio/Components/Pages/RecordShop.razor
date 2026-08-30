@@ -29,7 +29,7 @@
     </ul>
 
     <div class="project-actions">
-        <a href="https://github.com/Nazmul5765/Record-Shop"
+        <a href="https://github.com/Nazmul5765/record-shop-api"
            target="_blank"
            rel="noopener noreferrer">
             Backend repository
@@ -146,10 +146,12 @@
             <div>
                 <h3>Persistence and health monitoring</h3>
                 <p>
-                    Store album data using Entity Framework Core, with SQL Server
-                    used during development and PostgreSQL for the deployed application.
-                    Health checks monitor both the API and its database connection.
-
+                    Store album data using Entity Framework Core. SQL Server is used
+                    for local development so data persists across restarts, since an
+                    in-memory option is also available but resets every time the
+                    application stops, and PostgreSQL is used for the deployed
+                    application. Health checks monitor both the API and its
+                    database connection.
                 </p>
             </div>
         </li>
@@ -198,12 +200,18 @@
             environment. The live frontend is available through a custom subdomain
             of my portfolio domain.
         </p>
+        <p>
+            I later added a GitHub Actions pipeline for both the frontend and
+            backend, so every push automatically builds (and, for the backend,
+            runs the test suite) before it reaches production.
+        </p>
 
         <ul class="deployment-tools" aria-label="Deployment tools used">
             <li>Docker</li>
             <li>Railway</li>
             <li>PostgreSQL</li>
             <li>Neon</li>
+            <li>GitHub Actions</li>
         </ul>
     </div>
 </section>
