@@ -43,7 +43,7 @@ I am currently seeking a junior software developer role where I can continue dev
 
 ### RecordShop
 
-RecordShop is my solo Northcoders full-stack project. It is a record catalogue application with a separate ASP.NET Core Web API and Blazor frontend.
+RecordShop is my solo Northcoders full-stack project. It is a record shop application with a separate ASP.NET Core Web API and Blazor frontend.
 
 The application allows users to:
 
