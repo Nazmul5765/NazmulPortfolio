@@ -1,5 +1,7 @@
 ﻿# Nazmul Hussain — Developer Portfolio
 
+![CI](https://github.com/Nazmul5765/NazmulPortfolio/actions/workflows/ci.yml/badge.svg)
+
 My personal software developer portfolio, created to showcase my background, technical skills and projects while applying for junior C#/.NET development roles.
 
 **Live website:** [nazmulhussain.co.uk](https://nazmulhussain.co.uk)
@@ -64,23 +66,24 @@ The application was originally developed using SQL Server and was later configur
 
 ### Calico
 
-Calico is a collaborative Northcoders group project combining Lo-Fi music with productivity and task-management tools.
+Calico is a collaborative Northcoders group project combining Lo-Fi music with productivity and task-management tools. Since the bootcamp, I've gone back to it independently — running a full security review, fixing what it found, and deploying it myself.
 
 The project includes:
 
-- Lo-Fi music discovery and playback
-- YouTube API integration
-- Playlist management
-- Projects, tasks and timers
+- Lo-Fi music discovery and playback via the YouTube API
+- Task timer and Pomodoro sessions
 - User registration and authentication with Supabase
 - User profiles
 - ASP.NET Core and Blazor frontend/backend development
 - Collaborative development using pair programming, daily stand-ups, Trello and Git
 
-The portfolio includes a detailed case study covering the project, how the team worked and my individual contributions.
+The backend uses the same layered controller, service and repository architecture as RecordShop. The frontend and backend are deployed as separate Docker services on Railway, with the backend connecting to an Azure SQL Database in production.
 
-- [Backend repository](https://github.com/NC-Group1/lofi-backend)
-- [Frontend repository](https://github.com/NC-Group1/lofi-frontend)
+The portfolio includes a detailed case study covering the original group project, my individual contributions, and the independent work I did afterwards.
+
+- [Live Calico application](https://calico.nazmulhussain.co.uk)
+- [Backend repository](https://github.com/Nazmul5765/calico-backend)
+- [Frontend repository](https://github.com/Nazmul5765/calico-frontend)
 
 ## Technologies
 
@@ -101,7 +104,7 @@ The portfolio itself uses:
 
 The site primarily uses custom CSS, including CSS custom properties, responsive layouts and component-scoped styles. A small JavaScript helper resets the browser scroll position after enhanced Blazor navigation.
 
-Technologies such as Entity Framework Core, SQL Server, PostgreSQL, NUnit, Supabase and the YouTube API are used within the featured projects rather than being dependencies of the portfolio application itself.
+Technologies such as Entity Framework Core, SQL Server, PostgreSQL, Azure SQL, NUnit, Supabase and the YouTube API are used within the featured projects rather than being dependencies of the portfolio application itself.
 
 ## Project Structure
 
