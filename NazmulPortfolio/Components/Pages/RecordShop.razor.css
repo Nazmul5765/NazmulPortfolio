@@ -382,6 +382,12 @@
         padding: 4rem 0;
     }
 
+    .project-deployment {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 4rem 0;
+    }
+
     .project-reflection {
         padding: 4rem 0;
     }
