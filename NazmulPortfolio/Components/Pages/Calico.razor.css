@@ -224,6 +224,16 @@
     line-height: 1.7;
 }
 
+.features-planned {
+    margin: 1.5rem 0 0;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-border);
+    color: var(--color-text-secondary);
+    font-size: 0.95rem;
+    font-style: italic;
+    line-height: 1.7;
+}
+
 .project-integrations {
     padding: 6rem 0;
     border-top: 1px solid var(--color-border);
@@ -257,6 +267,47 @@
     margin: 1rem 0 0;
     color: var(--color-text-secondary);
     line-height: 1.7;
+}
+
+.project-deployment {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: 4rem;
+    padding: 6rem 0;
+    border-top: 1px solid var(--color-border);
+}
+
+.deployment-content {
+    align-self: center;
+    max-width: 620px;
+}
+
+.deployment-content > p {
+    margin: 0;
+    color: var(--color-text-secondary);
+    font-size: 1.125rem;
+    line-height: 1.8;
+}
+
+.deployment-content p + p {
+    margin-top: 1.25rem;
+}
+
+.deployment-tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin: 2rem 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.deployment-tools li {
+    padding: 0.5rem 0.85rem;
+    background-color: var(--color-surface-elevated);
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    color: var(--color-text-secondary);
 }
 
 .project-reflection {
@@ -336,6 +387,12 @@
     }
 
     .project-integrations {
+        padding: 4rem 0;
+    }
+
+    .project-deployment {
+        grid-template-columns: 1fr;
+        gap: 2rem;
         padding: 4rem 0;
     }
 

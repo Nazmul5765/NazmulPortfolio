@@ -13,8 +13,9 @@
     <h1>Calico</h1>
 
     <p class="project-introduction">
-        A collaborative LoFi music and productivity platform combining playlists,
-        user accounts, project tracking and task timers in a Blazor application.
+        A collaborative LoFi music and productivity platform combining music
+        discovery, a Pomodoro-style focus timer and user accounts in a Blazor
+        application.
     </p>
 
     <ul class="project-technologies" aria-label="Technologies used">
@@ -24,19 +25,28 @@
         <li>Entity Framework Core</li>
         <li>Supabase</li>
         <li>YouTube API</li>
+        <li>SQLite</li>
+        <li>SQL Server</li>
+        <li>NUnit</li>
     </ul>
 
     <div class="project-actions">
-        <a href="https://github.com/NC-Group1/lofi-backend"
+        <a href="https://github.com/Nazmul5765/calico-backend"
            target="_blank"
            rel="noopener noreferrer">
             Backend repository
         </a>
 
-        <a href="https://github.com/NC-Group1/lofi-frontend"
+        <a href="https://github.com/Nazmul5765/calico-frontend"
            target="_blank"
            rel="noopener noreferrer">
             Frontend repository
+        </a>
+
+        <a href="https://calico.nazmulhussain.co.uk"
+           target="_blank"
+           rel="noopener noreferrer">
+            Live demo
         </a>
     </div>
 </header>
@@ -49,12 +59,28 @@
 
     <div class="project-section-content">
         <p>
-            Calico was developed collaboratively as a full-stack group project,
-            combining a Blazor frontend with an ASP.NET Core Web API and Supabase authentication.
+            Calico was built as a group project during the Northcoders Enterprise
+            Engineering Bootcamp. The goal was to combine music discovery with
+            productivity tools in a single application, giving the team a chance to
+            design and build a full-stack product together rather than working solo.
         </p>
         <p>
-            The platform brings together LoFi music discovery, playlists,
-            project tracking and task-timer functionality in one application.
+            Users can search for and play LoFi music, register and log in, and run
+            a task timer or a 25-minute Pomodoro session alongside the music. The
+            Blazor frontend communicates with an ASP.NET Core Web API over HTTP,
+            which uses Entity Framework Core for data access, while Supabase
+            handles user authentication and issues the tokens the API uses to
+            protect its endpoints.
+        </p>
+        <p>
+            Playlists and organising timed sessions by project are part of the
+            original design and already modelled in the database, but the UI for
+            them isn't built yet — that's next on the list to finish.
+        </p>
+        <p>
+            Since the group project, I've gone back to Calico independently —
+            carrying out a full security review, fixing what it found, and
+            deploying the finished application.
         </p>
     </div>
 </section>
@@ -62,7 +88,7 @@
 <section class="project-contribution" aria-labelledby="contribution-title">
     <div class="project-section-heading">
         <p class="project-section-label">My contribution</p>
-        <h2 id="contribution-title">Working within a collaborative development team</h2>
+        <h2 id="contribution-title">How I contributed to Calico</h2>
     </div>
 
     <div class="contribution-grid">
@@ -87,6 +113,32 @@
                 built the initial Pomodoro timer prototype.
             </p>
         </article>
+
+        <article class="contribution-card">
+            <p class="contribution-label">Since the bootcamp</p>
+            <h3>Independent security review and bug fixes</h3>
+            <p>
+                After the bootcamp, I went back to Calico independently and ran a full
+                security review of the backend. I fixed what it found, including missing
+                authorisation checks that let any logged-in user view or edit someone
+                else's projects and account, and a mass-assignment flaw that let users
+                self-promote to admin. I also restored the real YouTube search
+                integration, which the group had replaced with a hardcoded list of
+                results because of API quota limits.
+            </p>
+        </article>
+
+        <article class="contribution-card">
+            <p class="contribution-label">Since the bootcamp</p>
+            <h3>Fixing the frontend end-to-end</h3>
+            <p>
+                I then fixed the frontend, where login, signup and the dashboard had
+                never worked correctly end-to-end. I rebuilt login and signup to work
+                properly with Supabase, connected the dashboard to the real logged-in
+                user instead of a placeholder, added a working logout, and merged in
+                and fixed an unfinished Pomodoro timer.
+            </p>
+        </article>
     </div>
 </section>
 
@@ -96,39 +148,39 @@
         <h2 id="features-title">Music and productivity capabilities</h2>
     </div>
 
-    <ul class="features-list">
-        <li>
-            <span class="feature-number">01</span>
-            <div>
-                <h3>Music discovery and playback</h3>
-                <p>Discover LoFi videos through YouTube-powered results, play embedded content and organise selected music into playlists.</p>
-            </div>
-        </li>
+    <div>
+        <ul class="features-list">
+            <li>
+                <span class="feature-number">01</span>
+                <div>
+                    <h3>Music discovery and playback</h3>
+                    <p>Discover LoFi videos through YouTube-powered results and play embedded content directly in the app.</p>
+                </div>
+            </li>
 
-        <li>
-            <span class="feature-number">02</span>
-            <div>
-                <h3>Playlist organisation</h3>
-                <p>Create and manage playlists around selected music.</p>
-            </div>
-        </li>
+            <li>
+                <span class="feature-number">02</span>
+                <div>
+                    <h3>Task timer and Pomodoro sessions</h3>
+                    <p>Track a session with a simple count-up timer, or run a 25-minute Pomodoro session with play and pause synced between the timer and the embedded video.</p>
+                </div>
+            </li>
 
-        <li>
-            <span class="feature-number">03</span>
-            <div>
-                <h3>Project and task tracking</h3>
-                <p>Organise productivity work through projects and timed tasks.</p>
-            </div>
-        </li>
+            <li>
+                <span class="feature-number">03</span>
+                <div>
+                    <h3>User accounts</h3>
+                    <p>Support registration, authentication and profile management.</p>
+                </div>
+            </li>
+        </ul>
 
-        <li>
-            <span class="feature-number">04</span>
-            <div>
-                <h3>User accounts</h3>
-                <p>Support registration, authentication and profile management.</p>
-            </div>
-        </li>
-    </ul>
+        <p class="features-planned">
+            Playlists and organising timed sessions by project are already modelled
+            in the database and part of the original design, but the UI for them
+            isn't built yet — planned as the next feature to finish.
+        </p>
+    </div>
 </section>
 
 <section class="project-integrations" aria-labelledby="integrations-title">
@@ -141,8 +193,10 @@
         <article class="integration-card">
             <h3>Supabase authentication</h3>
             <p>
-                User identity is integrated with Supabase and protected backend
-                requests use authentication tokens.
+                User accounts and login are handled by Supabase, which issues a JWT
+                on sign-in. The backend verifies each token's signature against
+                Supabase's public keys and uses its claims to identify the caller
+                and enforce ownership and admin checks on every protected endpoint.
             </p>
         </article>
 
@@ -151,35 +205,75 @@
             <p>
                 I worked as the navigator while my pair and I built the backend, frontend,
                 API integration and a dedicated YouTube search page. With limited time before
-                the demo, we did not use the separate search page and instead displayed the
-                searched videos on the home page beneath the featured video. I plan to restore
-                the full API-driven search experience before publishing my personal live demo.
+                the demo, we fell back to a hardcoded list of results shown on the home page
+                instead of the real API, due to YouTube quota limits. After the bootcamp, I
+                restored the real API integration with a caching layer to manage quota, and
+                decided to keep search permanently merged into the home page rather than
+                reviving the separate page.
             </p>
         </article>
 
         <article class="integration-card">
             <h3>Frontend and API communication</h3>
             <p>
-                Blazor services use HTTP requests to exchange application data
-                with the ASP.NET Core backend.
+                The Blazor Server frontend runs entirely on its own server, so
+                every request to the backend happens server-side through a
+                centrally configured HttpClient rather than directly from the
+                browser. Since the login token lives in a cookie set by the
+                frontend rather than being forwarded automatically, each request
+                attaches it manually as a Bearer token so the backend can verify
+                who's calling.
             </p>
         </article>
+    </div>
+</section>
+
+<section class="project-deployment" aria-labelledby="deployment-title">
+    <div class="project-section-heading">
+        <p class="project-section-label">Deployment</p>
+        <h2 id="deployment-title">Taking the application from local development to production</h2>
+    </div>
+
+    <div class="deployment-content">
+        <p>
+            I used Docker to package the frontend and backend, tested each
+            container locally to make sure it worked the same way it would in
+            production, and deployed them to Railway as individual services. I
+            also set up a GitHub Actions pipeline
+            for each project, so every push automatically builds and checks
+            that nothing is broken before it goes anywhere near production.
+        </p>
+        <p>
+            The backend uses SQLite for local development and an Azure SQL
+            Database in production, with separate configuration for each so
+            the right settings are picked up automatically. The frontend is
+            available through a custom subdomain of my portfolio domain.
+        </p>
+
+        <ul class="deployment-tools" aria-label="Deployment tools used">
+            <li>Docker</li>
+            <li>Railway</li>
+            <li>Azure SQL</li>
+            <li>GitHub Actions</li>
+        </ul>
     </div>
 </section>
 
 <section class="project-reflection" aria-labelledby="reflection-title">
     <div class="reflection-content">
         <p class="project-section-label">Reflection</p>
-        <h2 id="reflection-title">What I developed through collaborative work</h2>
+        <h2 id="reflection-title">What I developed through this project</h2>
 
         <p>
             Working on Calico strengthened my experience of pair programming in
             both driver and navigator roles and contributing to a shared full-stack codebase.
             Daily stand-ups, Trello planning and end-of-day Git reviews and merges
             taught me how a development team coordinates work, shares knowledge and
-            delivers features together. My Pomodoro prototype linked a 25-minute focus
-            session with music controls, but it was not merged into main because it still
-            needed debugging; I plan to improve it before publishing a live demo.
+            delivers features together. Going back to Calico independently afterwards
+            taught me a different set of skills — carrying out a proper security
+            review, working through what it found methodically, and taking an
+            application all the way from a group project to something genuinely
+            deployed and working end-to-end.
         </p>
     </div>
 
