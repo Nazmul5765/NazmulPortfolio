@@ -99,6 +99,19 @@
     outline-offset: 3px;
 }
 
+.project-screenshot {
+    margin: 0 0 6rem;
+}
+
+.project-screenshot img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--color-border);
+    border-radius: 1rem;
+    box-shadow: 0 20px 60px -20px rgba(0, 0, 0, 0.5);
+}
+
 .project-overview {
     display: grid;
     grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
@@ -354,6 +367,10 @@
 @media (max-width: 750px) {
     .project-detail-hero {
         padding: 3rem 0 4rem;
+    }
+
+    .project-screenshot {
+        margin-bottom: 4rem;
     }
 
     .project-overview {
