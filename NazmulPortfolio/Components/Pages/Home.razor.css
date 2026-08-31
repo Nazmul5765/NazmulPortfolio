@@ -1,12 +1,35 @@
 ﻿.hero {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
     min-height: 65vh;
     padding: 4rem 0 5rem;
 }
 
 .hero-content {
     max-width: 760px;
+}
+
+.hero-photo {
+    flex-shrink: 0;
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 30%;
+}
+
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .hero-photo {
+        width: 260px;
+        height: 260px;
+    }
 }
 
 .hero-eyebrow {
