@@ -1,7 +1,8 @@
 ﻿<article class="project-card">
-    @if (!string.IsNullOrEmpty(ImageUrl))
+    @if (HasImage)
     {
-        <img class="project-card-image" src="@ImageUrl" alt="" loading="lazy" />
+        <img class="project-card-image" src="@ImageUrl" alt="" loading="lazy"
+             style="object-position: @ImagePosition" />
     }
     <div class="project-card-header">
         <p class="project-type">@ProjectType</p>
@@ -31,5 +32,9 @@
     [Parameter]
     public string? ImageUrl { get; set; }
     [Parameter]
+    public string ImagePosition { get; set; } = "top";
+    [Parameter]
     public IReadOnlyList<string> Technologies { get; set; } = Array.Empty<string>();
+
+    private bool HasImage => !string.IsNullOrEmpty(ImageUrl);
 }
